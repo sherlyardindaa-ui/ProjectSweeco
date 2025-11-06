@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    tools:context=".login">
 
     <ImageView
-        android:id="@+id/headerImage"
+        android:id="@+id/loginImage"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:src="@drawable/cakelogin"
@@ -21,10 +22,9 @@
         android:id="@+id/loginCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-40dp"
-        app:cardElevation="6dp"
+        android:layout_marginTop="-30dp"
+        app:cardElevation="15dp"
         app:cardCornerRadius="24dp"
-        app:layout_constraintTop_toBottomOf="@id/headerImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,59 +37,163 @@
             android:gravity="center_horizontal"
             android:orientation="vertical"
             android:padding="24dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             app:cardCornerRadius="90dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="490dp"
                 android:layout_gravity="center"
                 android:gravity="center_horizontal"
-                android:maxWidth="380dp"
+                android:maxWidth="30dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textViewLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textSize="25dp"
+                    android:layout_marginTop="0dp"
                     android:fontFamily="sans-serif-black"
-                    android:layout_marginTop="-2dp"
+                    android:text="Log In"
+                    android:textAlignment="center"
                     android:textColor="#604036"
-                    android:text="Login" />
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
+                <View
+                    android:id="@+id/viewGarisLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="2dp"
+                    android:background="#604036" />
+
+                <TextView
+                    android:id="@+id/textViewEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Email"
+                    android:textColor="#604036"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txtUsername"
+                    android:id="@+id/editTextTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/outline_edit"
+                    android:ems="10"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/textViewPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Password"
+                    android:textColor="#604036"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/outline_edit"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/buttonLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editTextPassword"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="90dp"
+                    android:backgroundTint="#7B2C2C"
+                    android:text="Log In"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textViewRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Register"
+                    android:textAlignment="center"
+                    android:textColor="#604036"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/viewGarisRegis"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="2dp"
+                    android:background="#604036" />
+
+                <LinearLayout
+                    android:id="@+id/btnGoogle"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:background="@drawable/edittext_bg"
-                    android:hint="Username"
-                    android:paddingHorizontal="14dp" />
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/outline_edit"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
 
-                <EditText
-                    android:id="@+id/txtPassword"
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/logo_google" />
+
+                    <TextView
+                        android:id="@+id/textViewGoogle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:text="Hubungkan dengan Google"
+                        android:textColor="#604036"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnFacebook"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginTop="12dp"
-                    android:background="@drawable/edittext_bg"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:paddingHorizontal="14dp" />
+                    android:background="@drawable/outline_edit"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
 
-                <Button
-                    android:id="@+id/btnLogin"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="16dp"
-                    android:backgroundTint="#7D4DFF"
-                    android:fontFamily="sans-serif-medium"
-                    android:stateListAnimator="@null"
-                    android:text="Login"
-                    android:textColor="#FFFFFF" />
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/logo_fb" />
 
+                    <TextView
+                        android:id="@+id/textViewFacebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:text="Hubungkan dengan Facebook"
+                        android:textColor="#604036"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ProjectSweeco</string>
+    <string name="login_title"><u>Login</u></string>
+    <string name="register_title"><u>Register</u></string>
 </resources>

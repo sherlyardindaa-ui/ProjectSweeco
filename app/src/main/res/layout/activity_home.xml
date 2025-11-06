@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDF7F1">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#7B2C25"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:clipToOutline="true"
+            android:backgroundTintMode="src_over"
+            android:elevation="3dp">
+
+            <TextView
+                android:text="Halo Aley,"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Welcome to Sweecco"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/baseline_search_24"
+                android:paddingHorizontal="10dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@android:drawable/ic_menu_search"
+                    android:tint="#A87E7A" />
+
+                <EditText
+                    android:id="@+id/searchBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Cari dessert favoritmu ..."
+                    android:background="@android:color/transparent"
+                    android:textColor="#5C3A36"
+                    android:textColorHint="#9B807C"
+                    android:paddingStart="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Promo Card -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="#7B2C25"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:elevation="2dp"
+            android:clipToOutline="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="HOT TODAY"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:text="Limited Edition"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:src="@drawable/ic_macaron"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+        <!-- Promo Section -->
+        <TextView
+            android:text="Promo"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#7B2C25"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="#F5E3D8"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="2dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/ic_icecream"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:text="DINGIN SEGAR !!!"
+                    android:textStyle="bold"
+                    android:textColor="#5C3A36"
+                    android:layout_marginTop="6dp" />
+
+                <TextView
+                    android:text="Diskon Ice Cream\nSemua scoop diskon 10% untuk weekend ini!"
+                    android:textSize="12sp"
+                    android:textColor="#5C3A36" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="#F5E3D8"
+                android:padding="8dp"
+                android:elevation="2dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/ic_cake"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:text="Promo Cake"
+                    android:textStyle="bold"
+                    android:textColor="#5C3A36"
+                    android:layout_marginTop="6dp" />
+
+                <TextView
+                    android:text="Potongan harga cake spesial untuk pelanggan baru!"
+                    android:textSize="12sp"
+                    android:textColor="#5C3A36" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Kategori -->
+        <TextView
+            android:text="Kategori"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#7B2C25"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/item_kategori"
+                    android:id="@+id/cakeCategory"
+                    android:layout_marginEnd="12dp"
+                    android:tag="Cake"
+                    app:iconSrc="@drawable/ic_cake"
+                    app:labelText="Cake" />
+
+                <include layout="@layout/item_kategori"
+                    android:layout_marginEnd="12dp"
+                    android:tag="Coffee"
+                    app:iconSrc="@drawable/ic_coffee"
+                    app:labelText="Coffee" />
+
+                <include layout="@layout/item_kategori"
+                    android:layout_marginEnd="12dp"
+                    android:tag="Ice Cream"
+                    app:iconSrc="@drawable/ic_icecream"
+                    app:labelText="Ice Cream" />
+
+                <include layout="@layout/item_kategori"
+                    android:layout_marginEnd="12dp"
+                    android:tag="Croissant"
+                    app:iconSrc="@drawable/ic_croissant"
+                    app:labelText="Croissant" />
+
+                <include layout="@layout/item_kategori"
+                    android:tag="Donuts"
+                    app:iconSrc="@drawable/ic_donut"
+                    app:labelText="Donuts" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Wajib Coba -->
+        <TextView
+            android:text="Wajib Coba"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#7B2C25"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <include layout="@layout/item_produk"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp" />
+
+            <include layout="@layout/item_produk"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- Bottom Navigation -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="#7B2C25"
+            android:paddingVertical="10dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView android:src="@drawable/ic_home" android:layout_width="30dp" android:layout_height="30dp" android:tint="@android:color/white" android:layout_marginHorizontal="16dp"/>
+            <ImageView android:src="@drawable/ic_menu" android:layout_width="30dp" android:layout_height="30dp" android:tint="@android:color/white" android:layout_marginHorizontal="16dp"/>
+            <ImageView android:src="@drawable/ic_cart" android:layout_width="30dp" android:layout_height="30dp" android:tint="@android:color/white" android:layout_marginHorizontal="16dp"/>
+            <ImageView android:src="@drawable/ic_profile" android:layout_width="30dp" android:layout_height="30dp" android:tint="@android:color/white" android:layout_marginHorizontal="16dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
