@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectSweeco">
         <activity
+            android:name=".bulat"
+            android:exported="false" />
+        <activity
+            android:name=".itemKategori"
+            android:exported="false" />
+        <activity
             android:name=".home"
             android:exported="false" />
         <activity
