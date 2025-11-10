@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Warna maroon -->
+    <solid android:color="#7B2C2C" />
+
+    <!-- Sudut melengkung -->
+    <corners android:radius="24dp" />
+
+    <!-- (opsional) Tambahkan padding dalam kotak -->
+    <padding
+        android:left="16dp"
+        android:top="12dp"
+        android:right="16dp"
+        android:bottom="12dp" />
+</shape>

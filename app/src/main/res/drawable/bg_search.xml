@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Warna latar belakang putih -->
+    <solid android:color="#F1F1F1"/>
+
+    <!-- Sudut melengkung (biar mirip field pencarian di gambar) -->
+    <corners android:radius="25dp"/>
+
+    <!-- Bayangan halus (efek elevasi ringan) -->
+    <padding
+        android:left="10dp"
+        android:top="10dp"
+        android:right="10dp"
+        android:bottom="10dp"/>
+
+    <!-- Garis pinggir samar -->
+    <stroke
+        android:width="1dp"
+        android:color="#DDDDDD"/>
+
+</shape>

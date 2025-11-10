@@ -1,92 +1,131 @@
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FDF7F1">
+    android:background="#FFF7EE"
+    tools:context=".home">
 
-    <LinearLayout
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:background="#FFF9F5"
+        tools:context=".HomeActivity">
 
-        <!-- ✅ HEADER (Hanya bagian ini yang merah) -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp"
-            android:background="@drawable/bg_header_home"
-            android:elevation="4dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <!-- Text Welcome + Bell -->
+            <!-- HEADER -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp"
+                android:background="@drawable/header">
+
+                <!-- Ikon Notifikasi di Kanan Atas -->
+                <ImageView
+                    android:id="@+id/icNotification"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_notifications_none_24"
+                    android:tint="#FAEBD7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"/>
+
+                <!-- Teks Halo Aley -->
+                <TextView
+                    android:id="@+id/tvHalo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Halo Aley,"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="#FAEBD7"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp"/>
+
+                <!-- Teks Welcome -->
+                <TextView
+                    android:id="@+id/tvWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome to Sweeco"
+                    android:textColor="#FAEBD7"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/tvHalo"
+                    app:layout_constraintTop_toBottomOf="@id/tvHalo"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- Search Bar -->
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Cari dessert favoritmu..."
+                    android:paddingStart="16dp"
+                    android:background="@drawable/bg_search"
+                    app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="16dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- ============ HOT TODAY SECTION ============ -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="space_between"
-                android:orientation="horizontal">
+                android:background="@drawable/bg_hot"
+                android:padding="16dp"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="HOT TODAY"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="#FAEBD7"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Limited Edition"
+                    android:textColor="#FAEBD7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- ============ PROMO SECTION ============ -->
+            <TextView
+                android:text="Promo"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textiewHalo"
-                        android:text="Halo Aley,"
-                        android:textColor="@android:color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        tools:ignore="InvalidId" />
-
-                    <TextView
-                        android:text="Welcome to Sweecco"
-                        android:textColor="@android:color/white"
-                        android:textSize="16sp"/>
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="26dp"
-                    android:layout_height="26dp"
-                    android:src="@drawable/baseline_notifications_none_24"
-                    android:tint="@android:color/white"/>
-            </LinearLayout>
-
-            <!-- Search box -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/baseline_search_24"
-                android:gravity="center_vertical"
-                android:paddingHorizontal="12dp"
-                android:layout_marginTop="16dp">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@android:drawable/ic_menu_search"
-                    android:tint="#7B2C25"/>
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Cari dessert favoritmu..."
-                    android:background="@android:color/transparent"
-                    android:textColor="#5C3A36"
-                    android:textColorHint="#9B807C"
-                    android:paddingStart="8dp"/>
-            </LinearLayout>
-
-        </LinearLayout> <!-- ✅ PENTING: INI PENUTUP HEADER -->
-
-        <!-- ✅ Bagian setelah ini tidak boleh merah -->
-        <include layout="@layout/section_hot_promo"/>
-        <include layout="@layout/section_promo_grid"/>
-        <include layout="@layout/section_kategori"/>
-        <include layout="@layout/section_wajib_coba"/>
-        <include layout="@layout/section_bottom_nav"/>
-
-    </LinearLayout>
-
-</ScrollView>
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:layout_marginEnd="12dp"
