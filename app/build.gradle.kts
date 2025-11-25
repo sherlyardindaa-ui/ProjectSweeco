@@ -42,6 +42,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation ("androidx.cardview:cardview:1.0.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

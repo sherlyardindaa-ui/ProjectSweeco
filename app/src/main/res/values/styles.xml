@@ -1,0 +1,23 @@
+<resources>
+    <!-- Style Dasar untuk Tab Kategori (Non-Aktif) -->
+    <style name="CategoryTab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
+        <!-- Asumsikan Anda memiliki drawable untuk background tab non-aktif -->
+        <item name="android:background">@drawable/tab_background_inactive</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+    </style>
+
+    <!-- Style untuk Tab Kategori yang Sedang Aktif (Contoh: Coffie) -->
+    <style name="CategoryTabActive" parent="CategoryTab">
+        <!-- Asumsikan Anda memiliki drawable untuk background tab aktif -->
+        <item name="android:background">@drawable/tab_background_active</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

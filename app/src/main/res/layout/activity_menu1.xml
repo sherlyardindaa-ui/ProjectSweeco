@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pattern">
+
+    <!-- HEADER MERAH -->
+    <LinearLayout
+        android:id="@+id/headerMenu"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/header">
+
+        <TextView
+            android:id="@+id/txtMenuTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MENU"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- KONTEN UTAMA -->
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_below="@id/headerMenu"
+        android:layout_above="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- SCROLL KIRI (VERTIKAL) -->
+        <ScrollView
+            android:layout_width="120dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/menuContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <!-- ITEM GAMBAR MENU 1 -->
+                <ImageView
+                    android:id="@+id/imgMenu1"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/menu_item1" />
+
+                <!-- ITEM GAMBAR MENU 2 -->
+                <ImageView
+                    android:id="@+id/imgMenu2"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/menu_item2" />
+
+                <!-- ITEM GAMBAR MENU 3 -->
+                <ImageView
+                    android:id="@+id/imgMenu3"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/menu_item3" />
+
+                <!-- ITEM GAMBAR MENU 4 -->
+                <ImageView
+                    android:id="@+id/imgMenu4"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/menu_item4" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- KONTEN KANAN -->
+        <LinearLayout
+            android:id="@+id/rightContent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/imgPreview"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/menu_item1" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Menu"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/txtDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi menu..."
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- BOTTOM BAR -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#9B1717">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_home" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="45dp"
+            android:src="@drawable/ic_menu" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="45dp"
+            android:src="@drawable/ic_cart" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="45dp"
+            android:src="@drawable/ic_profile" />
+    </LinearLayout>
+
+</RelativeLayout>

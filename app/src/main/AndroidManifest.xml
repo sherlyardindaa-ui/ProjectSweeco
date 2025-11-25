@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectSweeco">
         <activity
+            android:name=".Styles"
+            android:exported="false" />
+        <activity
+            android:name=".ItemMenu"
+            android:exported="false" />
+        <activity
+            android:name=".Menu1"
+            android:exported="false" />
+        <activity
             android:name=".bulat"
             android:exported="false" />
         <activity
